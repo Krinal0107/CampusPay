@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 15% 5%;
+    --foreground: 40 10% 92%;
+
+    --card: 220 15% 8%;
+    --card-foreground: 40 10% 92%;
+
+    --popover: 220 15% 8%;
+    --popover-foreground: 40 10% 92%;
+
+    --primary: 40 95% 55%;
+    --primary-foreground: 220 15% 5%;
+
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 40 10% 85%;
+
+    --muted: 220 12% 14%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 160 60% 45%;
+    --accent-foreground: 220 15% 5%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 12% 16%;
+    --input: 220 12% 16%;
+    --ring: 40 95% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 15% 6%;
+    --sidebar-foreground: 40 10% 85%;
+    --sidebar-primary: 40 95% 55%;
+    --sidebar-primary-foreground: 220 15% 5%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 40 10% 85%;
+    --sidebar-border: 220 12% 14%;
+    --sidebar-ring: 40 95% 55%;
+
+    --gold: 40 95% 55%;
+    --gold-light: 40 95% 70%;
+    --gold-dark: 40 90% 40%;
+    --emerald: 160 60% 45%;
+    --emerald-light: 160 55% 60%;
+    --surface-glass: 220 15% 10%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(40 95% 55%) 0%, hsl(30 100% 45%) 100%);
+    --gradient-emerald: linear-gradient(135deg, hsl(160 60% 45%) 0%, hsl(170 65% 35%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(220 15% 5%) 0%, hsl(220 18% 3%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(220 15% 10%) 0%, hsl(220 15% 7%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 18% 3%) 0%, hsl(225 20% 7%) 50%, hsl(220 15% 5%) 100%);
+
+    --shadow-gold: 0 0 40px hsl(40 95% 55% / 0.15);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 8px 40px hsl(0 0% 0% / 0.4);
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Glass card utility */
+@layer components {
+  .glass-card {
+    background: linear-gradient(135deg, hsl(220 15% 10% / 0.6), hsl(220 15% 7% / 0.4));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(220 12% 18% / 0.5);
+  }
+
+  .glass-card-hover:hover {
+    border-color: hsl(40 95% 55% / 0.3);
+    box-shadow: 0 0 30px hsl(40 95% 55% / 0.08);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 40px hsl(40 95% 55% / 0.2), 0 0 80px hsl(40 95% 55% / 0.1);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(40 95% 60%), hsl(30 100% 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-emerald {
+    background: linear-gradient(135deg, hsl(160 60% 50%), hsl(170 65% 40%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gold-subtle {
+    border-color: hsl(40 95% 55% / 0.2);
+  }
+
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(hsl(220 12% 14% / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(220 12% 14% / 0.3) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
+
+/* Wallet button overrides */
+.wallet-adapter-button {
+  background: linear-gradient(135deg, hsl(40 95% 55%), hsl(30 100% 45%)) !important;
+  color: hsl(220 15% 5%) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  border-radius: 0.75rem !important;
+  padding: 0.625rem 1.5rem !important;
+  font-size: 0.875rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: none !important;
+  height: auto !important;
+  line-height: 1.5 !important;
+}
+
+.wallet-adapter-button:hover {
+  opacity: 0.9 !important;
+  box-shadow: 0 0 30px hsl(40 95% 55% / 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+.wallet-adapter-button-trigger {
+  background: linear-gradient(135deg, hsl(40 95% 55%), hsl(30 100% 45%)) !important;
+}
+
+.wallet-adapter-modal-wrapper {
+  background: hsl(220 15% 8%) !important;
+  border: 1px solid hsl(220 12% 16%) !important;
+  border-radius: 1rem !important;
+}
+
+.wallet-adapter-modal-title {
+  color: hsl(40 10% 92%) !important;
+  font-family: var(--font-heading) !important;
+}
+
+.wallet-adapter-modal-list li {
+  background: hsl(220 15% 10%) !important;
+  border-radius: 0.75rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.wallet-adapter-modal-list li:hover {
+  background: hsl(220 15% 14%) !important;
+}
+
+.wallet-adapter-modal-button-close {
+  background: hsl(220 15% 14%) !important;
+  color: hsl(40 10% 92%) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(220 15% 5%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220 12% 20%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220 12% 30%);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
