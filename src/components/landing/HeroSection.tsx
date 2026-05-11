@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
         >
           The Future of{' '}
           <span className="text-gradient-gold">Campus Payments</span>{' '}
-          in Africa
+          in India
         </motion.h1>
 
         <motion.p

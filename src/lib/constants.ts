@@ -1,5 +1,5 @@
 export const APP_NAME = 'CampusPay+';
-export const APP_TAGLINE = 'The Future of Campus Payments in Africa';
+export const APP_TAGLINE = 'The Future of Campus Payments in India';
 
 export const SUPPORTED_CHAINS = [
   { id: 'ethereum', name: 'Ethereum', symbol: 'ETH', icon: '⟠' },

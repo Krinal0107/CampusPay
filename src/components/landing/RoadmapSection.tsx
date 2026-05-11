@@ -23,9 +23,9 @@ const roadmap = [
   },
   {
     quarter: 'Q1 2027',
-    title: 'Pan-African Expansion',
+    title: 'Pan-Indian Expansion',
     status: 'upcoming',
-    items: ['Expand to Ghana, Kenya, South Africa', 'Multi-currency support', 'Government partnerships', 'Full mobile app launch'],
+    items: ['Expand to Delhi, Mumbai, South India', 'Multi-currency support', 'Government partnerships', 'Full mobile app launch'],
   },
 ];
 

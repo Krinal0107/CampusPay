@@ -45,7 +45,7 @@ const features = [
   {
     icon: Smartphone,
     title: 'Mobile-First Design',
-    description: 'Built for smartphones. Optimized for how African students actually pay.',
+    description: 'Built for smartphones. Optimized for how Indian students actually pay.',
   },
   {
     icon: FileText,

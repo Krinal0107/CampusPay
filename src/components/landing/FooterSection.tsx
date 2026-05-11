@@ -16,7 +16,7 @@ const FooterSection: React.FC = () => {
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              The future of campus payments in Africa. Instant, secure, cashless.
+              The future of campus payments in India. Instant, secure, cashless.
             </p>
           </div>
 
